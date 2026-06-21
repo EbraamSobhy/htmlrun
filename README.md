@@ -17,13 +17,9 @@ Perfect for quickly previewing static websites, prototypes, and frontend experim
 
 ## Installation
 
-### Download CLI
-<ul>
-  <li><a href="./htmlrun-linux-amd64" download="htmlrun-linux-amd64">Linux (x64)</a></li>
-  <li><a href="./htmlrun-windows-amd64.exe" download="htmlrun-windows-amd64.exe">Windows (x64)</a></li>
-  <li><a href="./htmlrun-macos-amd64" download="htmlrun-macos-amd64">macOS (Intel)</a></li>
-  <li><a href="./htmlrun-macos-arm64" download="htmlrun-macos-arm64">macOS (Apple Silicon)</a></li>
-</ul>
+### 1. Download the Binary
+
+Go to the [Releases](https://github.com/EbraamSobhy/htmlrun/releases/tag/v1.0.0) page and download the binary for your operating system.
 
 ### Linux (x64)
 
