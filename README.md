@@ -17,135 +17,55 @@ Perfect for quickly previewing static websites, prototypes, and frontend experim
 
 ## Installation
 
-### Clone the Repository
+### Download CLI
+*   [Linux (x64)](portfolio-cli-linux)
+*   [Windows (x64)](portfolio-cli.exe)
+*   [macOS (Intel)](portfolio-cli-macos)
+*   [macOS (Apple Silicon)](portfolio-cli-macos-arm64)
+### Linux (x64)
 
 ```bash
-git clone https://github.com/EbraamSobhy/htmlrun.git
-cd htmlrun
+chmod +x htmlrun-linux-amd64
+sudo mv htmlrun-linux-amd64 /usr/local/bin/htmlrun
 ```
 
-### Build
+### macOS (Intel)
 
 ```bash
-go build -o htmlrun
+chmod +x htmlrun-macos-amd64
+sudo mv htmlrun-macos-amd64 /usr/local/bin/htmlrun
 ```
+
+### macOS (Apple Silicon)
+
+```bash
+chmod +x htmlrun-macos-arm64
+sudo mv htmlrun-macos-arm64 /usr/local/bin/htmlrun
+```
+
+### Windows (x64)
+
+```text
+htmlrun-windows-amd64.exe
+```
+
+Optionally add the executable directory to your system PATH.
 
 ---
-
 ## Usage
 
-Place your `index.html` file in a directory and run:
+Place the executable anywhere in your PATH and run:
 
 ```bash
-./htmlrun
+htmlrun index.html
 ```
 
-The server will start on:
-
-```text
-http://localhost:8080
-```
-
-Example output:
-
-```text
-Serving: http://localhost:8080
-```
-
-Open the URL in your browser to view the project.
-
----
-
-## Project Structure
-
-```text
-project/
-├── index.html
-├── style.css
-├── script.js
-└── assets/
-```
-
-Example:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello from HTMLRun!</h1>
-</body>
-</html>
-```
-
-Running:
+### Output:
 
 ```bash
-./htmlrun
+index.html http://localhost:8080
+
 ```
-
-will serve the entire directory.
-
----
-
-## Requirements
-
-* Go 1.20 or newer
-
-Check your version:
-
-```bash
-go version
-```
-
----
-
-## Current Behavior
-
-The application:
-
-1. Uses the current directory as the web root.
-2. Serves all static files.
-3. Listens on port `8080`.
-4. Makes the project available at:
-
-```text
-http://localhost:8080
-```
-
----
-
-## Example
-
-Start the server:
-
-```bash
-./htmlrun
-```
-
-Visit:
-
-```text
-http://localhost:8080
-```
-
-You should see your `index.html` page rendered in the browser.
-
----
-
-## Future Roadmap
-
-Planned features:
-
-* Automatic browser opening
-* Custom port support
-* File watching and live reload
-* Single-file mode
-* HTTPS support
-* Configuration file support
-* Colored terminal output
 
 ---
 

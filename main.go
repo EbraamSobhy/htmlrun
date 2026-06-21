@@ -3,11 +3,22 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 	"path/filepath"
 )
 
 func main() {
-	file := "index.html"
+	if len(os.Args) < 2 {
+		fmt.Println("Usage: htmlrun <html-file>")
+		os.Exit(1)
+	}
+
+	file := os.Args[1]
+
+	if _, err := os.Stat(file); err != nil {
+		fmt.Println("File not found:", file)
+		os.Exit(1)
+	}
 
 	dir := filepath.Dir(file)
 
@@ -17,7 +28,7 @@ func main() {
 
 	url := "http://localhost:" + port
 
-	fmt.Println("Serving:", url)
+	fmt.Println(filepath.Base(file), url)
 
 	http.ListenAndServe(":"+port, nil)
 }
